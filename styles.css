@@ -1,0 +1,283 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(25, 31, 38);
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0 auto;
+    color: #ccc;
+}
+
+h1 {
+
+    @media screen and (min-height: 737px) {
+        padding-bottom: 0;
+        padding-top: .5em;
+    }
+    @media screen and (max-height: 736px) and (min-height: 569px) {
+        padding-bottom: 0;
+        padding-top: .5em;
+    }
+    @media screen and (max-height: 568px) {
+        padding-bottom: .25em;
+        padding-top: .25em;
+    }
+}
+
+h2 {
+    padding-bottom: .5em;
+}
+
+h3 {
+    padding-bottom: .25em;
+}
+
+.tagline {
+    margin: 0 auto;
+    color: #555;
+    font-weight: normal;
+    padding: .5em 0 2em .3em;
+
+    @media screen and (min-height: 737px) {
+        display: block;
+    }
+    @media screen and (max-height: 736px) and (min-height: 569px) {
+        display: block;
+    }
+    @media screen and (max-height: 568px) {
+        display: none;
+    }
+}
+
+span, .warning-icon {
+    display: flex;
+    justify-content: end;
+    color: #555;
+    font-family: "sf mono", sans-serif;
+    font-size: .8em;
+    margin: 0 auto;
+    padding-top: .5em;
+}
+
+.container {
+    width: 70%;
+}
+
+textarea {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #ccc;
+    background-color: rgb(35, 40, 45);
+    resize: none;
+
+    @media screen and (min-height: 737px) {
+        height: 30vh;
+    }
+    @media screen and (max-height: 736px) and (min-height: 569px) {
+        height: 30vh;
+    }
+    @media screen and (max-height: 568px) {
+        height: 25vh;
+    }
+}
+
+.input-area {
+    @media screen and (min-height: 737px) {
+        padding-bottom: 1em;
+    }
+    @media screen and (max-height: 736px) and (min-height: 569px) {
+        padding-bottom: 0;
+    }
+    @media screen and (max-height: 568px) {
+        padding-bottom: 0;
+    }
+}
+
+button {
+    display: block;
+    padding: 10px 20px;
+    background-color: #003393;
+    color: #fff;
+    /*border: none;*/
+    border-radius: 5px;
+    border: calc(calc(var(--checkbox-width) / 15) * 1px) solid black;
+    box-shadow: inset 0 0 calc(calc(var(--checkbox-width) / 10) * 1px) rgba(0, 0, 0, calc(var(--active-shadow-opacity))),
+    inset 0 calc(calc(var(--checkbox-width) / 20) * 1px) calc(calc(var(--checkbox-width) / 30) * 1px) calc(calc(var(--checkbox-width) / var(--negative-shadow-offset)) * -1px) var(--checkbox-color-light),
+    inset 0 calc(calc(var(--checkbox-width) / 20) * -1px) calc(calc(var(--checkbox-width) / 15) * 1px) calc(calc(var(--checkbox-width) / var(--negative-shadow-offset)) * -1px) var(--checkbox-color-dark);
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+svg {
+    padding-right: .2em;
+}
+
+label {
+    color: #555;
+    padding-right: .5em;
+    font-size: .9em;
+}
+
+.output-container {
+    position: relative;
+}
+
+.copy-btn {
+    background-color: #003393;
+    border: calc(calc(var(--checkbox-width) / 15) * 1px) solid black;
+    box-shadow: inset 0 0 calc(calc(var(--checkbox-width) / 10) * 1px) rgba(0, 0, 0, calc(var(--active-shadow-opacity))),
+    inset 0 calc(calc(var(--checkbox-width) / 20) * 1px) calc(calc(var(--checkbox-width) / 30) * 1px) calc(calc(var(--checkbox-width) / var(--negative-shadow-offset)) * -1px) var(--checkbox-color-light),
+    inset 0 calc(calc(var(--checkbox-width) / 20) * -1px) calc(calc(var(--checkbox-width) / 15) * 1px) calc(calc(var(--checkbox-width) / var(--negative-shadow-offset)) * -1px) var(--checkbox-color-dark);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.copy-btn:hover {
+    background-color: #0056b3;
+}
+
+.copy-div-btn {
+    padding-right: .2em;
+}
+
+.button-div {
+    display: flex;
+    align-items: end;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.toggle-labels {
+    gap: 0.2em;
+    padding-bottom: 0.5em;
+}
+
+.output-char {
+    display: flex;
+    justify-content: end;
+}
+
+.span-div {
+    display: flex;
+    padding-left: .5em;
+}
+
+.flex {
+    display: flex;
+}
+
+.button-div-wrapper {
+    display: flex;
+    max-width: 70%;
+}
+
+.flex-align {
+    display: flex;
+    align-items: center;
+}
+
+.colour-coded-icons {
+    display: flex;
+    padding-right: 1em;
+}
+
+#clear-button, #confirmation-button {
+    display: none;
+    background-color: transparent;
+    color: #555;
+}
+
+#confirmation-button {
+    border: none;
+    box-shadow: none;
+    cursor: auto;
+    white-space: nowrap; /* Prevents the text inside the button from wrapping */
+    overflow: hidden; /* Ensures no spillover outside the button */
+    text-overflow: ellipsis; /* Adds '...' for overflown text */
+}
+
+#output-warning-icon {
+    display: none;
+    z-index: 10;
+}
+
+.bubble {
+    display: none;
+    position: absolute;
+    color: #555;
+    min-height: 168px;
+    max-width: 100%;
+    background-color: rgb(25, 31, 38);
+    padding: 5px 20px;
+    border-radius: 20px 20px 0 20px;
+    border: 2px solid #0056b3;
+    font-size: 12px;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    bottom: 8%;
+    right: 0;
+    white-space: normal;
+}
+
+.output-char:hover #output-warning-bubble {
+    display: block;
+}
+
+@media (min-width: 1200px) {
+    .toggle-labels {
+        display: flex;
+    }
+    .all-label {
+    }
+}
+@media (max-width: 1199px) and (min-width: 1000px) {
+    .toggle-labels {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 0.2em;
+    }
+    .all-label {
+        grid-column: 1 / -1; /* Spanning from the start to the end of the grid line, initially */
+    }
+}
+@media (max-width: 999px) and (min-width: 750px) {
+    .toggle-labels {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 0.2em;
+    }
+    .all-label {
+        grid-column: 1 / -1; /* Spanning from the start to the end of the grid line, initially */
+    }
+}
+@media (max-width: 749px) {
+    .toggle-labels {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 0.2em;
+    }
+    .all-label {
+        grid-column: 1 / -1; /* Spanning from the start to the end of the grid line, initially */
+    }
+    .tagline {
+        font-size: .7em;
+    }
+    .input-area {
+        padding-bottom: 0;
+    }
+}
