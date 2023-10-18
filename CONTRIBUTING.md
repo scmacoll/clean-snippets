@@ -6,11 +6,11 @@ Thank you for your interest in contributing to Clean Snippets. We welcome contri
 
 ### 1. Reporting Bugs
 
-If you encounter any bugs related to the text area, please report them by [opening a new issue](https://github.com/scmacoll/clean-snippets.com/issues/new). Be as detailed as possible in your description.
+If you encounter any bugs related to the text area, please report them by [opening a new issue](https://github.com/scmacoll/clean-snippets/issues). Be as detailed as possible in your description.
 
 ### 2. Suggesting New Features
 
-Any suggestions for new features or improving the text area functionality are welcome. Share your ideas by [opening a new issue](https://github.com/scmacoll/clean-snippets.com/issues/new) and labeling it as an enhancement.
+Any suggestions for new features or improving the text area functionality are welcome. Share your ideas by [opening a new issue](https://github.com/scmacoll/clean-snippets/issues) and labeling it as an enhancement.
 
 ### 3. Code Contributions
 

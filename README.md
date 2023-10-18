@@ -47,7 +47,7 @@ To copy the code, click the "Copy" button. If you want to clean a new snippet, c
 
 ## Contributing
 
-We encourage developers to contribute to Clean Snippets. Whether it's a bug report, new feature, or suggestion for improvement, we welcome new ideas. Please fork the repository and use a feature branch before sending a pull request.
+We encourage developers to [contribute](CONTRIBUTING.md) to Clean Snippets. Whether it's a bug report, new feature, or suggestion for improvement, we welcome new ideas. Please fork the repository and use a feature branch before sending a pull request.
 
 ## Feedback
 
