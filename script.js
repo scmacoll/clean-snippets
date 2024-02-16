@@ -22,6 +22,12 @@ const outputCharCount = document.getElementById('output-char-count');
 const warningIcon = document.getElementById("output-warning-icon");
 
 document.addEventListener('DOMContentLoaded', async (event) => {
+  inputArea.value = '';
+  outputArea.value = '';
+  inputCharCount.textContent = '0 characters';
+  outputCharCount.textContent = '0 characters';
+  warningIcon.style.display = "none";
+
   initializeCopyButtonsSVG();
   await loadToggleControls();
   initializeToggleCheckboxes();
