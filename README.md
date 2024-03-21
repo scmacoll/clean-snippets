@@ -5,7 +5,7 @@
 </p>
 
 ## Overview
-https://cleansnippets.com/
+https://cleansnippets.com/ / Clean Snippets App (Mac)
 
 Clean Snippets is a tool designed for developers looking to simplify and shorten their code snippets for more straightforward sharing, storing, or usage within prompts. It removes unnecessary components like comments, whitespace, and more based on user preferences.
 
@@ -25,9 +25,20 @@ Clean Snippets is a tool designed for developers looking to simplify and shorten
 4. **Copy or Clear**: Users can immediately copy the cleaned code to their clipboard or clear the text area to start over. The application provides visual confirmation for these actions.
 
 ## Installation
-
+### Web
 No installation is necessary for the web application. Users need to navigate to the hosted website URL - https://cleansnippets.com/.
+### Mac App (M chip)
+To install the Mac application, follow these steps:
 
+1. Navigate to the [Releases](https://github.com/scmacoll/clean-snippets/releases) page of this GitHub repository.
+2. Look for the latest release and download the `.dmg` file associated with it.
+3. Once downloaded, open the `.dmg` file.
+4. Drag the application icon to your Applications folder to install the app.
+5. Open your Applications folder and double-click on the app to run it.
+
+Note: You might need to allow the application to run in your System Preferences if you get a security warning upon the first launch. This is common for applications downloaded outside of the Mac App Store.
+
+---
 Developers who wish to contribute to or modify the application's source code can clone the repository to their local machine.
 
 ```bash
@@ -43,13 +54,15 @@ npm install
 
 ## Usage
 
-Upon loading, the web app is ready for use. Paste your code snippet into the designated area and select the elements to remove. After setting up, click "Clean" to get the final, cleaned-up code. The character counter informs users about the size of their snippets.
+Upon loading, the app is ready for use. Paste your code snippet into the designated area and select the elements to remove. After setting up, click "Clean" to get the final, cleaned-up code. The character counter informs users about the size of their snippets.
 
 To copy the code, click the "Copy" button. If you want to clean a new snippet, click "Clear" to empty the text areas and start fresh.
 
 ## Contributing
 
-We encourage developers to [contribute](CONTRIBUTING.md) to Clean Snippets. Whether it's a bug report, new feature, or suggestion for improvement, we welcome new ideas. Please fork the repository and use a feature branch before sending a pull request.
+I encourage developers to [contribute](CONTRIBUTING.md) to Clean Snippets. Whether it's a bug report, new feature, or suggestion for improvement, I welcome new ideas. Please fork the repository and use a feature branch before sending a pull request.
+
+Code for the web app is all within the first parent directory whilst code for the Mac App is inside the macApp/ folder.
 
 ## Feedback
 
@@ -61,4 +74,4 @@ Clean Snippets is available under the [MIT License](https://opensource.org/licen
 
 ## Acknowledgments
 
-We want to thank everyone who has contributed to the development of Clean Snippets, as every contribution helps make this tool useful for developers worldwide.
+I want to thank everyone who has contributed to the development of Clean Snippets, as every contribution helps make this tool useful for developers worldwide.
