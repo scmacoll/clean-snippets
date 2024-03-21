@@ -1,0 +1,10 @@
+bin/
+obj/
+.vs/
+.vscode/
+.idea/
+*.user
+*.userprefs
+*.suo
+*.swp
+*.*~

@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="clean_snippets_app.MainPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#22272E">
+    <ScrollView>
+        <Grid
+            Padding="30,30,30,10"
+            HorizontalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />   <!-- grid 0 -->
+                <RowDefinition Height="*" /> <!-- grid 1 -->
+                <RowDefinition Height="*" />   <!-- grid 2 -->
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0">
+                <Label
+                    Text="Clean Snippets"
+                    FontSize="30"
+                    TextColor="#ffffff"
+                    HorizontalOptions="Start"
+                    Margin="0,0,0,10" />
+
+                <Label
+                       Text="Simplify Your Code Snippets for Sharing and Prompting"
+                       FontSize="16"
+                       TextColor="#888"
+                       HorizontalOptions="Start"
+                       Margin="0,0,0,5" />
+            </StackLayout>
+
+            <StackLayout Grid.Row="1">
+
+                <!-- Section for Code Input -->
+                <Label
+                       Text="Remove:"
+                       FontSize="18"
+                       TextColor="#ffffff"
+                       HorizontalOptions="Start"
+                       Margin="0,20,0,0" />
+
+                <!-- Toggle Controls for Cleaning Options -->
+                <FlexLayout Wrap="Wrap" JustifyContent="Start">
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox x:Name="cleanAllToggle" Color="#003BB2" CheckedChanged="AllToggleChecked" VerticalOptions="Center" />
+                        <Label Text="All" TextColor="#888" VerticalOptions="Center" />
+                    </StackLayout>
+                    <StackLayout  Orientation="Horizontal">
+                        <CheckBox x:Name="cleanBlankLinesToggle" Color="#003BB2" VerticalOptions="Center" />
+                        <Label Text="Blank Lines" TextColor="#888" VerticalOptions="Center" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox x:Name="cleanCommentsToggle" Color="#003BB2" VerticalOptions="Center" />
+                        <Label Text="Comments" TextColor="#888" VerticalOptions="Center" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox x:Name="cleanImportsToggle" Color="#003BB2" VerticalOptions="Center" />
+                        <Label Text="Imports" TextColor="#888" VerticalOptions="Center" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox x:Name="cleanSvgToggle" Color="#003BB2" VerticalOptions="Center" />
+                        <Label  Text="SVG (inline)" TextColor="#888" VerticalOptions="Center" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox x:Name="cleanWhitespaceToggle" Color="#003BB2" VerticalOptions="Center" />
+                        <Label Text="Whitespace" TextColor="#888" VerticalOptions="Center" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox x:Name="cleanWrapToggle" Color="#003BB2" VerticalOptions="Center" />
+                        <Label Text="Wrapping" TextColor="#888" VerticalOptions="Center" />
+                    </StackLayout>
+                </FlexLayout>
+
+                <!-- Code Input Area -->
+                <Frame x:Name="inputFrame" MinimumHeightRequest="70" BorderColor="#ccc"
+                        HasShadow="False"
+                        CornerRadius="8"
+                        Padding="8"
+                        BackgroundColor="#23282d"
+                >
+                    <Editor x:Name="inputArea"
+                            Placeholder="Paste your code here..."
+                            TextColor="#ccc"
+                            PlaceholderColor="#ccc"
+                            BackgroundColor="#23282d"
+                            IsTextPredictionEnabled="False"
+                            IsSpellCheckEnabled="False"
+                             />
+                </Frame>
+
+                <Label x:Name="inputCharCount"
+                       FontSize="12"
+                       Style="{StaticResource SubHeadline}"
+                       TextColor="#888"
+                       Margin="0,8,0,0"
+                       HorizontalOptions="End"
+                       AutomationProperties.HelpText="Input Character Count" />
+
+            </StackLayout>
+
+            <StackLayout Grid.Row="2">
+
+                <StackLayout Orientation="Horizontal" Margin="0,10,0,0">
+                    <Button x:Name="cleanButton"
+                            Text="Clean"
+                            TextColor="#ffffff"
+                            BackgroundColor="#003BB2"
+                            WidthRequest="75"
+                            Clicked="OnCleanButtonClicked"
+                    />
+                    <Button x:Name="clearButton"
+                            Text="Clear"
+                            TextColor="#ccc"
+                            BackgroundColor="transparent"
+                            WidthRequest="75"
+                            Clicked="OnClearButtonClicked"
+                            IsVisible="false"
+                    />
+                    <!-- Expanding space to push the copy button to the end -->
+                    <BoxView HorizontalOptions="FillAndExpand" BackgroundColor="transparent" />
+                    <Button x:Name="copyButton"
+                            Text="Copy"
+                            TextColor="#ffffff"
+                            BackgroundColor="#2d4a86"
+                            HeightRequest="25"
+                            Clicked="OnCopyButtonClicked"
+                    />
+                </StackLayout>
+
+                    <!-- Output Area -->
+                <Frame x:Name="outputFrame" MinimumHeightRequest="70" BorderColor="#ccc"
+                       HasShadow="False"
+                       CornerRadius="8"
+                       Padding="8"
+                       BackgroundColor="#23282d"
+                >
+                        <!-- <Label x:Name="outputArea" -->
+                        <!--        Text="Cleaned code will appear here..." -->
+                        <!--        TextColor="#888" -->
+                        <!--        VerticalOptions="Start" -->
+                        <!--        Margin="1,1,1,1" -->
+                        <!--        HorizontalOptions="FillAndExpand" /> -->
+
+                            <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                <Editor x:Name="outputArea"
+                                        AutoSize="TextChanges"
+                                        Placeholder="Cleaned code will appear here..."
+                                        TextColor="#ccc"
+                                        PlaceholderColor="#ccc"
+                                        BackgroundColor="#23282d"
+                                        IsReadOnly="true"
+                                        IsTextPredictionEnabled="False"
+                                        IsSpellCheckEnabled="False"
+                                        VerticalOptions="FillAndExpand"
+                                />
+                            </ScrollView>
+
+                </Frame>
+
+                <Label x:Name="outputCharCount"
+                       FontSize="12"
+                       Style="{StaticResource SubHeadline}"
+                       TextColor="#888"
+                       Margin="0,8,0,0"
+                       HorizontalOptions="End"
+                       AutomationProperties.HelpText="Output Character Count" />
+
+            </StackLayout>
+
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

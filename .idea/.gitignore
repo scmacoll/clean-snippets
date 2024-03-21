@@ -3,3 +3,14 @@
 /workspace.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+
+bin/
+obj/
+.vs/
+.vscode/
+.idea/
+*.user
+*.userprefs
+*.suo
+*.swp
+*.*~
