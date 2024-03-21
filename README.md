@@ -1,6 +1,8 @@
 # Clean Snippets
-<img width="1436" alt="cleansnippets" src="https://github.com/scmacoll/CleanSnippets.com/assets/85879687/a6d6df95-2188-4985-8052-de552840b9bf">
 
+<p align="center">
+  <img src="https://github.com/scmacoll/clean-snippets/assets/85879687/102fc0a4-9ef1-4e49-8939-d11aaebb7419" alt="Clean_Snippets_demo_video1">
+</p>
 
 ## Overview
 https://cleansnippets.com/
